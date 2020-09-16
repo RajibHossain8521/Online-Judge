@@ -15,15 +15,15 @@ void dfs(int i, int j)
     if (board[i][j] != 'w')
         return;
 
-    if (color[i][j]==0)
+    if (color[i][j] == 0)
     {
         color[i][j] = 1;
-        dfs(i-1, j-1);
-        dfs(i-1, j);
-        dfs(i, j-1);
-        dfs(i, j+1);
-        dfs(i+1, j);
-        dfs(i+1, j+1);
+        dfs(i - 1, j - 1);
+        dfs(i - 1, j);
+        dfs(i, j - 1);
+        dfs(i, j + 1);
+        dfs(i + 1, j);
+        dfs(i + 1, j + 1);
     }
 }
 
@@ -36,11 +36,10 @@ int main()
         // Count total played game
         Output_number++;
 
-        for (int i=1; i<=N; i++)   
-            for (int j=1; j<=N; j++)
+        for (int i = 1; i <= N; i++)
+            for (int j = 1; j <= N; j++)
                 cin >> board[i][j];
-            
-        
+
         // find winner in the board
         for (int i = 1; i <= N; i++)
             if (board[i][1] == 'w' && color[i][1] == 0)
