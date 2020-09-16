@@ -33,7 +33,7 @@ int main()
 
     while (scanf("%d", &N) && N)
     {
-        // Count total played game
+        // count total played game
         Output_number++;
 
         for (int i = 1; i <= N; i++)
