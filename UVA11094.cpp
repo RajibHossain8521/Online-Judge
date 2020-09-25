@@ -10,13 +10,10 @@ void dfs(int x, int y)
 {
     if (y < 0)
         y = col - 1;
-
     if (y >= col)
         y = 0;
-
     if (x<0 || x>=row)
         return;
-
     if (visited[x][y] == 1 || map[x][y] != land)
         return;
     
