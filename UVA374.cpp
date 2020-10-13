@@ -8,6 +8,7 @@ int mod(int B, int P, int M)
     if (P%2==0)
     {
         int x = mod(B, P/2, M);
+        printf("B:%d-P:%d-M:%d-X:%d-Ans:%d\n", B, P, M, x, (x*x)%M);
         return (x*x)%M;
     }
     else
